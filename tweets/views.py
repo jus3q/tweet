@@ -4,7 +4,8 @@ from .models import Tweet
 
 # Create your views here.
 def home_view(request, *args, **kwargs):
-    return HttpResponse("hi")
+    # return HttpResponse("hi")
+    return render(request, 'pages/home.html', context={}, status=200)
 
 def tweet_detail_view(request, tweet_id, *args, **kwargs):
     ''' rest api view return json data, consume by java...'''
